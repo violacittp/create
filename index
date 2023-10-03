@@ -24,27 +24,27 @@
 
         /* Gaya untuk latar belakang tabel */
         .table {
-            background-color: #361509; /* Warna latar belakang coklat muda untuk tabel */
+            background-color: #e7feff; /* Warna latar belakang biru muda untuk tabel */
             font-size: 16px; /* Ukuran font dalam tabel */
         }
 
         /* Gaya untuk latar belakang halaman web */
         body {
             background-color: white; /* Warna latar belakang putih untuk halaman web */
-            font-family: 'Roboto', sans-serif; /* Ganti font */
+            font-family: 'Roboto', cursive; /* Ganti font */
             font-size: 18px; /* Ukuran font dalam halaman */
         }
 
         /* Gaya untuk judul */
         h1 {
-            color: #361509; /* Warna judul coklat muda */
+            color: ##e7feff ; /* Warna judul biru muda */
             font-weight: bold; /* Membuat judul menjadi lebih tebal */
             font-size: 28px; /* Ukuran font judul */
         }
 
         /* Gaya untuk tombol "Tambah Rekap" */
         .btn-tambah {
-            background-color: #A38068; /* Warna latar belakang coklat muda */
+            background-color: #4682b4; /* Warna latar belakang biru */
             color: white; /* Warna teks putih */
             font-weight: bold; /* Membuat teks tombol menjadi lebih tebal */
             font-size: 16px; /* Ukuran font tombol */
@@ -52,7 +52,7 @@
 
         /* Gaya untuk tabel */
         .table {
-        background-color: #DAD5CE; /* Warna latar belakang abu-abu muda untuk tabel */
+        background-color: #B0C4DE; /* Warna latar belakang biru baja muda untuk tabel */
         border-radius: 10px; /* Menambahkan sudut oval */
         overflow: hidden; /* Menghindari konten yang mungkin keluar dari sudut oval */
         font-size: 16px; /* Ukuran font dalam tabel */
@@ -61,27 +61,27 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Daftar Rekap Penjualan Apaajastore</h1>
+        <h1 class="mt-5">Daftar Rekap Product</h1>
         <a href="{{ route('rekap.create') }}" class="btn btn-tambah mt-3">Tambah Rekap</a>
         <table class="table mt-4">
             <thead>
                 <tr>
-                    <th>Nama</th>
-                    <th>Barang</th>
-                    <th>Harga</th>
-                    <th>Total</th>
-                    <th>Keterangan</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Product_Code</th>
+                    <th>Description</th>
+                    <th>Action</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($rekaps as $rekap)
                 <tr>
-                    <td>{{ $rekap->nama }}</td>
-                    <td>{{ $rekap->barang }}</td>
-                    <td>{{ $rekap->harga }}</td>
-                    <td>{{ $rekap->total }}</td>
-                    <td>{{ $rekap->keterangan }}</td>
+                    <td>{{ $rekap->title }}</td>
+                    <td>{{ $rekap->price }}</td>
+                    <td>{{ $rekap->product_code }}</td>
+                    <td>{{ $rekap->description }}</td>
+                    <td>{{ $rekap->action }}</td>
                     <td>
                         <a href="{{ route('rekap.edit', $rekap->id) }}" class="btn btn-primary btn-sm btn-edit">
                         <i class="fas fa-pencil-alt"></i> Edit
