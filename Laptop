@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tambah Rekap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom styles for the page */
+        body {
+            background-color: blue; /* Set background color to blue */
+            font-family: 'Roboto', cursive;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #361509; /* Match title color */
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        /* Style the form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Match button style with "Tambah Rekap" */
+        .btn-tambah {
+            background-color: #A38068; /* Match button background color */
+            color: white;
+            font-weight: bold;
+            font-size: 20px; /* Slightly larger font size */
+            padding: 10px 20px; /* Adjust padding for a smaller button */
+            width: auto; /* Let the button size adjust to content */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Tambah Rekap</h1>
+        <form action="{{ route('rekap.store') }}" method="POST" class="mt-4">
+            @csrf
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price" name="price">
+            </div>
+            <div class="form-group">
+                <label for="product_code">Product_Code:</label>
+                <input type="text" class="form-control" id="product_code" name="product_code">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" class="form-control" id="description" name="description">
+            </div>
+            <div class="form-group">
+                <label for="keterangan">Keterangan:</label>
+                <input type="text" class="form-control" id="keterangan" name="keterangan">
+            </div>
+            <button type="submit" class="btn btn-tambah">Simpan</button>
+        </form>
+    </div>
+</body>
+</html>
