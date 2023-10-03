@@ -12,7 +12,7 @@ $table->string('title', 100);
             $table->double('description');
             $table->string('keterangan', 300);
 -teriminal (php artisan migrate)
--buka file models, rekap.php tambahkan: 
+-buka file models, Laptop.php tambahkan: 
 protected $table = 'rekap';
     protected $fillable = [
         'title', 'price', 'product_code', 'description', 'action',
