@@ -13,9 +13,9 @@ $table->string('title', 100);
             $table->string('keterangan', 300);
 -teriminal (php artisan migrate)
 -buka file models, Laptop.php tambahkan: 
-protected $table = 'rekap';
+protected $table = 'Laptop';
     protected $fillable = [
-        'title', 'price', 'product_code', 'description', 'action',
+        'title', 'price', 'product_code', 'description', 'keterangan',
     ];
 buka file resource, views, buat folder (Laptop), buat file didalam folder Laptop (dataLaptop.blade.php)
 buka beranda.blade.php copypaste ke dataLaptop.blade.php
