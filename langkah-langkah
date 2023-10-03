@@ -10,7 +10,7 @@ $table->string('title', 100);
             $table->string('price', 100);
             $table->double('product_code');
             $table->double('description');
-            $table->string('action', 300);
+            $table->string('keterangan', 300);
 -teriminal (php artisan migrate)
 -buka file models, rekap.php tambahkan: 
 protected $table = 'rekap';
@@ -22,5 +22,6 @@ buka beranda.blade.php copypaste ke dataLaptop.blade.php
 - teriminal (php artisan make:controller LaptopController)
 -buka file http, controllers (tambahkan code controllers pada githup)
 -lalu ke file resource, views, tambahkan folder rekap dengan isi file create, edit, index.blade.php (tambahkan code pada githup) 
+buka file web dan tambahkan Route::resource('laptop' LaptopController::class);
 -terimal (php artisan serve)
 -cek ke chrome sesuai dengan link yg muncul
