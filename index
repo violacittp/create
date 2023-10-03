@@ -70,7 +70,7 @@
                     <th>Price</th>
                     <th>Product_Code</th>
                     <th>Description</th>
-                    <th>Action</th>
+                    <th>Keterangan</th>
                     <th></th>
                 </tr>
             </thead>
@@ -81,7 +81,7 @@
                     <td>{{ $rekap->price }}</td>
                     <td>{{ $rekap->product_code }}</td>
                     <td>{{ $rekap->description }}</td>
-                    <td>{{ $rekap->action }}</td>
+                    <td>{{ $rekap->keterangan }}</td>
                     <td>
                         <a href="{{ route('rekap.edit', $rekap->id) }}" class="btn btn-primary btn-sm btn-edit">
                         <i class="fas fa-pencil-alt"></i> Edit
