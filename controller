@@ -1,0 +1,80 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Rekap; 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class RekapController extends Controller
+{
+    public function index()
+    {
+        $rekaps = Rekap::all(); // Mengambil semua data rekap dari tabel
+
+        return view('rekap.index', compact('rekaps'));
+    }
+
+    public function create()
+    {
+        return view('rekap.create');
+    }
+
+    public function store(Request $request)
+    {
+        // Validasi data yang dikirim oleh pengguna
+        $validatedData = $request->validate([
+            'title'       => 'required|max:100',
+            'price'     => 'required|max:100',
+            'product_code'      => 'required|numeric',
+            'description'      => 'required|numeric',
+            'action' => 'nullable|max:300',
+        ]);
+
+        // Simpan data rekap yang baru
+        Rekap::create($validatedData);
+
+        return redirect()->route('rekap.index')->with('success', 'Data rekap berhasil disimpan.');
+    }
+
+    public function show($id)
+    {
+        $rekap = Rekap::findOrFail($id); // Cari data rekap berdasarkan ID
+
+        return view('rekap.show', compact('rekap'));
+    }
+
+    public function edit($id)
+    {
+        $rekap = Rekap::findOrFail($id); // Cari data rekap berdasarkan ID
+
+        return view('rekap.edit', compact('rekap'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Validasi data yang dikirim oleh pengguna
+        $validatedData = $request->validate([
+            'title'      => 'required|max:100',
+            'price'    => 'required|max:100',
+            'product_code'     => 'required|numeric',
+            'description'     => 'required|numeric',
+            'action'=> 'nullable|max:300',
+        ]);
+
+        // Update data rekap yang ada
+        $rekap = Rekap::findOrFail($id);
+        $rekap->update($validatedData);
+
+        return redirect()->route('rekap.index')->with('success', 'Data rekap berhasil diperbarui.');
+    }
+
+    public function destroy($id)
+    {
+        // Hapus data rekap berdasarkan ID
+        $rekap = Rekap::findOrFail($id);
+        $rekap->delete();
+
+        return redirect()->route('rekap.index')->with('success', 'Data rekap berhasil dihapus.');
+    }
+}
