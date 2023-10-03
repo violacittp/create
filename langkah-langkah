@@ -19,9 +19,7 @@ protected $table = 'Laptop';
     ];
 - teriminal (php artisan make:controller LaptopController)
 -buka file http, controllers (tambahkan code controllers pada github)
-buka file resource, views, buat folder (Laptop), buat file didalam folder laptop (datalaptop.blade.php)
-buka beranda.blade.php copypaste ke dataLaptop.blade.php
--buka file http, controllers (tambahkan code controllers pada githup)
+buka file resource, views, buat folder (Laptop), buat file didalam folder laptop (datalaptop.blade.php) tambahkan code laptop pada github
 -lalu ke file resource, views, tambahkan folder rekap dengan isi file create, edit, index.blade.php (tambahkan code pada githup) 
 buka file web dan tambahkan Route::resource('laptop' LaptopController::class);
 -terimal (php artisan serve)
