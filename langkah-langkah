@@ -1,0 +1,26 @@
+CRUD
+-menghidupkan xampp
+-membuka phpmyadmin
+-membuat database (product)
+-membuka file .env dan merubah nama databasenya
+-buka terminal baru (php artisan make:model Laptop -m )
+-buka file database, migration, bawah sendiri
+memasukkan fieldnya
+$table->string('title', 100);
+            $table->string('price', 100);
+            $table->double('product_code');
+            $table->double('description');
+            $table->string('action', 300);
+-teriminal (php artisan migrate)
+-buka file models, rekap.php tambahkan: 
+protected $table = 'rekap';
+    protected $fillable = [
+        'title', 'price', 'product_code', 'description', 'action',
+    ];
+buka file resource, views, buat folder (Laptop), buat file didalam folder Laptop (dataLaptop.blade.php)
+buka beranda.blade.php copypaste ke dataLaptop.blade.php
+- teriminal (php artisan make:controller LaptopController)
+-buka file http, controllers (tambahkan code controllers pada githup)
+-lalu ke file resource, views, tambahkan folder rekap dengan isi file create, edit, index.blade.php (tambahkan code pada githup) 
+-terimal (php artisan serve)
+-cek ke chrome sesuai dengan link yg muncul
