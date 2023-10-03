@@ -9,14 +9,14 @@
     <style>
         /* Gaya khusus untuk tombol Edit dan Hapus */
         .btn-edit {
-            background-color: #A38068; /* Warna latar belakang coklat muda */
+            background-color: #4682b4; /* Warna latar belakang biru */
             color: white; /* Warna teks putih */
             font-weight: bold; /* Membuat teks tombol menjadi lebih tebal */
             font-size: 16px; /* Ukuran font tombol */
         }
 
         .btn-delete {
-            background-color: #A38068; /* Warna latar belakang coklat muda */
+            background-color: #4682b4; /* Warna latar belakang biru */
             color: white; /* Warna teks putih */
             font-weight: bold; /* Membuat teks tombol menjadi lebih tebal */
             font-size: 16px; /* Ukuran font tombol */
