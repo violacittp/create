@@ -28,7 +28,7 @@ class RekapController extends Controller
             'price'     => 'required|max:100',
             'product_code'      => 'required|numeric',
             'description'      => 'required|numeric',
-            'action' => 'nullable|max:300',
+            'keterangan' => 'nullable|max:300',
         ]);
 
         // Simpan data rekap yang baru
@@ -59,7 +59,7 @@ class RekapController extends Controller
             'price'    => 'required|max:100',
             'product_code'     => 'required|numeric',
             'description'     => 'required|numeric',
-            'action'=> 'nullable|max:300',
+            'keterangan'=> 'nullable|max:300',
         ]);
 
         // Update data rekap yang ada
